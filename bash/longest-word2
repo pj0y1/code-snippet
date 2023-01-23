@@ -1,0 +1,18 @@
+#!/bin/bash
+# longest-word2: for version of longest-word
+
+for f; do
+	if [ -r $f ]; then
+		max_word=
+		max_len=0
+		for i in $(strings $f); do
+			len=$(echo -n $i | wc -c)
+			if [ $len -gt $max_len ]; then
+				max_len=$len
+				max_word=$i
+			fi
+		done
+		echo "$f: longest word is $max_word, length $max_len"
+	fi
+	# without shift
+done

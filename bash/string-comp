@@ -1,0 +1,35 @@
+#!/bin/bash
+# string-comp: read command, and quotes needed when doing string comparison
+# can be extended to "guess what woman is thinking game" with mktemp cmd /dogeface
+# rather using mktemp
+# personally, I am confused this shell sorting order of strings ... which is solved in "sort-order"
+# 0-9A-Za-z
+
+ANS=$(cat /dev/urandom | head | md5sum | head -c 3)
+# note using "md5sum" only return string consisting of digit and lower letters
+# cont_code=
+exit_on_INT () {
+	echo "Alas... the answer is $ANS "
+	echo "Session interrupted."
+	exit
+}
+trap exit_on_INT SIGINT
+while true; do
+	read -p "Please enter a word: "
+	if [ $REPLY '>' "$ANS" ]; then
+		echo "Your guess is larger."
+	elif [ $REPLY '<' "$ANS" ]; then
+		echo "Your guess is smaller."
+	else
+		echo "You are right!"
+		break
+	fi
+#	read -p "Give up? Show me the answer and quit Y/n?: " cont_code
+#		if [ "$cont_code" == "Y" ]; then
+#			echo "The answer is $ANS "
+#			break
+#		else
+#			continue
+#		fi
+# such prompt is really annoying during guessing /dogeface
+done

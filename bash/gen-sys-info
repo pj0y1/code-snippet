@@ -1,0 +1,54 @@
+#!//bin/bash
+# first line of shell script is shebang
+
+# gen-sys-info: generate system report (without output to html file)
+# with enhanced version of report_home_space function
+
+declare -r TITLE="System report for $HOSTNAME"
+CURRENT_TIME=$(date +"%x %r %Z")
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+
+report_uptime (){
+cat <<- eof
+	<h2>System uptime</h2>
+	<pre>$(uptime)</pre>
+eof
+return
+}
+
+report_disk_space (){
+cat <<- eof
+	<h2>System disk space</h2>
+	<pre>$(df -h)</pre>
+eof
+return
+}
+
+report_home_space (){
+	if [ $(id -u) -eq 0 ]; then
+		dir="/home/*"
+	else
+		dir="$HOME"
+	fi
+cat <<- eof
+	<h2>System home space</h2>
+	<pre>$(du -sh $dir 2> /dev/null)</pre>
+eof
+# if use "$dir" here, /home/* would not be expanded, thus sudo would cause blank output
+return
+}
+
+cat <<- eof
+<html>
+	<head><title>$TITLE</title>
+	</head>
+
+	<body>
+	<h1>$TITLE</h1>
+	<p>$TIMESTAMP</p>
+	$(report_uptime)
+	$(report_disk_space)
+	$(report_home_space)
+	</body>
+</html>
+eof

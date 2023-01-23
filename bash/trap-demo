@@ -1,0 +1,16 @@
+#!/bin/bash
+# trap-demo: test for trap
+
+exit_on_signal_INT () {
+	echo "session interrupted. "
+	exit 0 2>&1
+}
+
+trap exit_on_signal_INT SIGINT
+
+echo "$$"
+echo
+for i in {5..1} ; do
+	echo "Count down on $i..."
+	sleep 5
+done

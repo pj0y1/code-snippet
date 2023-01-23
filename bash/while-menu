@@ -1,0 +1,48 @@
+#!/bin/bash -x
+# while-menu: using while loop to display a menu, with "-x" to trace
+
+#count=10
+#while [ $count -gt 0 ]; do
+#	echo $count
+#	count=$((count - 1))
+#done
+#echo "Done."
+DELAY=5
+REPLY=
+
+while [ "$REPLY" != 0 ]; do
+	clear
+	cat <<- eof
+Please select:
+1 display system info
+2 display disk info
+3 display home space info
+0 quit
+eof
+
+read -p "enter your choice: " 
+
+if [[ $REPLY =~ [0-3] ]]; then
+	if [ $REPLY == "1" ]; then
+		echo "Hostname: $HOSTNAME"
+		uptime
+		sleep $DELAY
+	elif [ $REPLY == "2" ]; then
+		df -h
+		sleep $DELAY
+	elif [ $REPLY == "3" ]; then
+		if [ $(id -u) -eq 0 ]; then
+			du -sh /home/*
+		else
+			du -sh $HOME 2> /dev/null
+		fi
+		sleep $DELAY
+	else
+		echo "Program terminated."
+		exit
+	fi
+else
+	echo "Invalid entry."
+	sleep $DELAY
+fi
+done

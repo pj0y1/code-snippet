@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# validate-input: test if the single input is a number, a file, etc.
+# updated with solution2, adding usage function
+# replace read command with positional argument
+# the good news with the replacement is I do not have to deal with shell expansion
+# it is automatically ... ( thus solution2 is no need now, neither the old_entry )
+# but need to pay extra attention to quote some token, such as &^%$... 
+# which have special meaning to the shell
+
+progname=$(basename $0)
+
+usage () {
+	echo "$progname: $FUNCNAME: $progname [entry ...] "
+	return
+}
+
+invalid_input () {
+	echo "Invalid input entry. not a number or a filename. "
+	return 1
+}
+
+# read -p "enter a single string: "
+# [ -z "$REPLY" ] && invalid_input
+# [ $(echo $REPLY | wc -w) -gt 1 ] && invalid_input
+[ -z "$1" ] && usage && exit 0
+# [ $# -gt 1 ] && invalid_input
+
+validate_input () {
+	if [[ $1 =~ ^0$|^[1-9][0-9]*$|^[0-9]*\.[0-9]+$ ]]; then
+		echo "$1 is a number."
+	elif [[ $1 =~ ^[a-zA-Z0-9_-\.\/\~]+$ ]]; then
+		echo -n "$1 is a valid filename. "
+##		old_entry=$1
+# solution1: ( have to manually replace $HOME, unsatisfying )
+#	REPLY1="$(echo $1 | sed 's/\~/\/home\/pj0y1/')"
+# solution2:
+##		if [[ $1 =~ ^\~$|^\~/.*$ ]]; then
+##			1=$(echo -n $HOME; echo ${1#\~})
+# testing		echo $1
+##		fi
+		if [ -e $1 ]; then
+			echo "$1 exists."
+		else
+			echo "$1 does not exist."
+		fi
+	else
+		invalid_input >&2
+	fi
+}
+exit_status=0
+for i in "$@" ; do
+	if ! validate_input $i; then
+		((++exit_status))
+	fi
+done
+exit $exit_status

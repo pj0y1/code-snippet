@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# display files according last modification time
+
+progname=$(basename $0)
+
+usage () {
+	echo "$progname: $FUNCNAME : $progname [-h | --help | DIR ]"
+	return
+}
+
+error () {
+	echo "$progname: $FUNCNAME : invalid input."
+	usage
+	return
+}
+
+case $1 in
+	-h|--help) usage; exit ;;
+	*)	if [ -z "$1" ]; then
+			usage
+			exit
+		elif [ ! -d "$1" ]; then
+			error >&2
+			exit 1
+		fi
+		;;
+esac
+
+
+# initializing arrays
+for i in {0..23}; do h[i]=0 ; done
+
+for f in $(stat -c %y "$1"/* | cut -c 12-13); do
+	k=${f/#0}
+	((++h[k]))
+done
+
+
+count=$(ls "$1" | wc -l)
+
+echo "Counting files in $1: "
+echo -e "Hours\tFiles\tHours\tFiles"
+echo -e "-----\t-----\t-----\t-----"
+for f in {0..11}; do
+	printf "%02d\t%d\t%02d\t%d\n" $f ${h[f]} $((f+12)) ${h[((f+12))]}
+done
+
+printf "Total files: %d\n" $count

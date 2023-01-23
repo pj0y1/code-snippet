@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# non-GUI version of xlogo
+
+exit_on_INT () {
+	echo "session interrupted. "
+	exit
+}
+
+exit_on_TERM () {
+	echo "session terminated. "
+	exit
+}
+
+trap exit_on_INT SIGINT
+trap exit_on_TERM SIGTERM
+
+while :; do 
+	sleep 1
+done

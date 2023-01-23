@@ -1,0 +1,13 @@
+#!/bin/bash
+
+progname=$(basename $0)
+
+if [[ "$1" =~ ^[0-9][1-9]*$ && "$1" -lt 100 ]]; then
+	c=$(( ($RANDOM % $1)+1 ))
+	echo "Your choice is $c."
+else
+	echo "usage: $progname num, where num is an integer < 100."
+	exit 1
+fi
+
+

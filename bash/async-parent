@@ -1,0 +1,17 @@
+#!/bin/bash
+# async-parent : asynchronous execution demo (from shotts)
+
+echo "Parent: starting ..."
+
+echo "Parent: launching child script ..."
+async-child &
+
+echo "Parent: child (PID = $! ) launched"
+sleep 2
+echo "Parent: waiting for child to finish ..."
+
+wait "$!"
+
+echo "Parent: child is finished, continuing ..."
+
+echo "Parent: parent is done. Bye. "

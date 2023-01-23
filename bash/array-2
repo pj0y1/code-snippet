@@ -1,0 +1,86 @@
+#!/bin/bash
+
+# replica of array-2 from shotts
+
+declare -A users groups
+progname=$(basename $0)
+
+usage () {
+	echo "$progname: $FUNCNAME: $progname [-h | --help | [-u | -g] [DIR] ...] "
+	return
+}
+
+help_info () {
+	echo -e "\t$progname receives directories, and return count of file/group owners."
+	echo -e "\t$progname usage: $progname [-h | --help] | [-u | -g] [DIR] ..."
+cat << eof
+	-h  --help  display help page, and usage infomation
+	-g  --group display group owners information, default is displaying both
+	-u  --user  display user owners information
+eof
+	return	
+}
+
+error () {
+	echo "$progname: $FUNCNAME: '$1' : no such directory. "
+}
+
+list_out () {
+	while read user group; do
+		(( ++users[$user] ))
+		(( ++groups[$group] ))
+	done < <(stat -c "%U %G" "$1"/* )
+#echo ${users[@]}
+#echo ${groups[@]}
+echo "File ownership in $1: "
+
+if [ "$ucode" == 1 ]; then
+	echo "File owners: "
+	for i in "${!users[@]}" ; do
+		printf "%-s\t:%10d file(s)\n" $i ${users[$i]}
+	done | sort
+fi
+
+if [ "$gcode" == 1 ]; then
+	echo "File group owners: "
+	for i in "${!groups[@]}" ; do
+		printf "%-s\t:%10d file(s)\n" $i ${groups[$i]}
+	done | sort
+fi
+}
+
+
+if [ $# -eq 0 ]; then
+	usage
+	exit
+fi
+ucode=1
+gcode=1
+
+for i ; do
+	case $i in
+		-h|--help) help_info; exit	;;
+		-u|--user) ucode=1 gcode=0	;;
+		-g|--group) ucode=0 gcode=1	;;
+		*)
+			if [ -d $i ]; then
+				list_out $i
+			else
+				case $1 in
+				-*) 
+					echo "$progname: '$i' invalid option. "
+					usage
+					;;
+				*)
+					error $i >&2
+					;;
+				esac
+				exit_status=1
+			fi
+	esac		
+done
+
+if [ "$exit_status" == 1 ]; then
+	exit 1
+fi
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+# while-redirect: (can be combined with process substitution < <(...) )
+
+sort -r usr.txt | while read var; do
+printf "%s\t" $var
+done #< usr.txt
+echo 
+exit

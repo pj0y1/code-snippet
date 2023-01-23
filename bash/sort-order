@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# sort-order: compare from a..z, A..Z to demonstrate string sorting order
+
+# a_list=$(echo {a..z} {A..Z})
+# b_list=$(echo {1..5})
+# c_list=$(echo {1..7})
+for i in {a..z} {A..Z} {0..9}; do
+	printf "%2s" $i
+done
+echo
+
+for i in {a..z} {A..Z} {0..9}
+do
+	echo -n "$i"
+
+	for j in {a..z} {A..Z} {0..9}
+	do
+#		echo -n "$j  "
+		if [ "$j" '>' "$i" ]; then
+			printf "%s " "<"
+		elif [ "$j" == "$i" ]; then
+			echo -n "  "
+		else
+			printf "%s " ">"
+		fi
+	done
+
+	echo
+done
+
+# it seems, using echoed version ${a_list[a]} in a nested loop
+# would confuse the shell ( but why? seems array is not a good choice )
+# directly using {a..z} {A..Z} can work ( but why? )
+# HOWEVER, finally verified the string sorting order is (from small to large) A-Z...a-z
+# but what about number? 0-9A-Za-z (following ASCII code)

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# new version of report_home_space, as shell script
+
+format="%8s%10s%10s\n"
+
+if [ $(id -u) -ne 0 ]; then
+	dir_list=$HOME
+#	user_list=$USER
+else
+	dir_list=/home/*
+#	user_list=$(for i in $dir_list; do basename $i ; done)
+fi
+
+for i in $dir_list; do
+	total_dir=$(find $i -type d 2> /dev/null | wc -l)
+	total_file=$(find $i -type f 2> /dev/null | wc -l)
+	size=$(du -sh $i 2> /dev/null | cut -f 1)
+
+	echo "In $i under user $(basename $i): "
+	printf "$format" "Dirs" "Files" "Size"
+	printf "$format" "----" "-----" "----"
+	printf "$format" "$total_dir" "$total_file" "$size"
+done

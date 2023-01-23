@@ -1,0 +1,26 @@
+#!/bin/bash
+# show state of charge
+progname=$(basename $0)
+
+usage (){
+	echo "$progname: usage: $progname -[pt]"
+	return
+}
+
+if [ $# -gt 1 -o $# -eq 0 ]; then
+	usage >&2
+	exit 1
+fi
+
+pattern=
+case $1  in
+	-p) pattern="percentage" ;;
+	-t) pattern="to empty" ;;
+	-pt|-tp) pattern="percentage|to empty" ;;
+	*)
+		usage >&2
+		exit 1
+		;;
+esac
+
+upower -e | grep BAT | xargs upower -i | grep -E "$pattern"

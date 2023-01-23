@@ -1,0 +1,21 @@
+#!/bin/bash
+# test case
+# case-menu : can be combined with while/ positional arguments
+
+echo "Display Menu: a/b/c/d"
+cat << eof
+a display disk space
+b display home space
+c display memory
+d display system space
+e press else to quit
+eof
+
+read
+case $REPLY in
+	a|A) df -h; exit ;;
+	b|B) du -sh $HOME 2> /dev/null;exit ;;
+	c|C) free;exit ;;
+	d|D) uptime;exit ;;
+	*) exit 0 ;;
+esac

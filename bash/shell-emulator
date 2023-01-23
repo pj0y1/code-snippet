@@ -1,0 +1,13 @@
+#!/bin/bash
+# test while
+# shell-emulator: note the use of eval
+
+REPLY=
+
+while true ; do
+	echo -n "$USER@$HOSTNAME:$(pwd)\$ "
+	read -e
+	#$(echo $REPLY)
+	eval "$REPLY"
+done
+exit
