@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<head>
+    <title>DISC</title>
+    
+</head>
+<body>
+    <form action=""  method="post" id="disc" target="result">
+        <fieldset>
+            <legend>No. 1</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>兴致勃勃：对事务感到兴奋</label></td>
+                    <td><input type="radio" id="01-m-square" name="01-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="01-l-square" name="01-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>敢作敢为：勇于冒险</label></td>
+                    <td><input type="radio" id="01-m-circle" name="01-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="01-l-circle" name="01-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>交往得体：彬彬有礼，尊重他人</label></td>
+                    <td><input type="radio" id="01-m-pentagram" name="01-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="01-l-pentagram" name="01-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>满足：心满意足</label></td>
+                    <td><input type="radio" id="01-m-triangle" name="01-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="01-l-triangle" name="01-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 2</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>谨慎：小心</label></td>
+                    <td><input type="radio" id="02-m-pentagram" name="02-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="02-l-pentagram" name="02-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有决心：持之以恒</label></td>
+                    <td><input type="radio" id="02-m-circle" name="02-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="02-l-circle" name="02-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有说服力：能使人赞同或信任</label></td>
+                    <td><input type="radio" id="02-m-square" name="02-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="02-l-square" name="02-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>性情温和：善良、顺服</label></td>
+                    <td><input type="radio" id="02-m-triangle" name="02-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="02-l-diamond" name="02-l" value="diamond"><label>&diams;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 3</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>友善：乐于与人共处</label></td>
+                    <td><input type="radio" id="03-m-square" name="03-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="03-l-diamond" name="03-l" value="diamond"><label>&diams;</label></td>
+                </tr>
+                <tr>
+                    <td><label>精密正确：按要求处理事情</label></td>
+                    <td><input type="radio" id="03-m-pentagram" name="03-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="03-l-pentagram" name="03-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>坦率：说话毫不掩饰，无所顾忌</label></td>
+                    <td><input type="radio" id="03-m-circle" name="03-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="03-l-circle" name="03-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>冷静：不易受外界干扰</label></td>
+                    <td><input type="radio" id="03-m-diamond" name="03-m" value="diamond"><label>&diams;</label></td>
+                    <td><input type="radio" id="03-l-triangle" name="03-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 4</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>多话：滔滔不绝</label></td>
+                    <td><input type="radio" id="04-m-square" name="04-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="04-l-square" name="04-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>自制力强：善于掩饰自己的情感</label></td>
+                    <td><input type="radio" id="04-m-pentagram" name="04-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="04-l-pentagram" name="04-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>遵循惯例：惯于按常规方法行事</label></td>
+                    <td><input type="radio" id="04-m-triangle" name="04-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="04-l-triangle" name="04-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>果断：速断速决</label></td>
+                    <td><input type="radio" id="04-m-circle" name="04-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="04-l-circle" name="04-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 5</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>具有冒险精神：勇于尝试新事物</label></td>
+                    <td><input type="radio" id="05-m-circle" name="05-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="05-l-circle" name="05-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>具有洞察力：能看清事实</label></td>
+                    <td><input type="radio" id="05-m-pentagram" name="05-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="05-l-pentagram" name="05-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>善交际：乐于与人交往</label></td>
+                    <td><input type="radio" id="05-m-square" name="05-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="05-l-square" name="05-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>适中：不偏激</label></td>
+                    <td><input type="radio" id="05-m-triangle" name="05-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="05-l-triangle" name="05-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 6</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>温和：仁慈待人</label></td>
+                    <td><input type="radio" id="06-m-triangle" name="06-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="06-l-triangle" name="06-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有说服力：能说服他人</label></td>
+                    <td><input type="radio" id="06-m-square" name="06-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="06-l-diamond" name="06-l" value="diamond"><label>&diams;</label></td>
+                </tr>
+                <tr>
+                    <td><label>谦虚：不骄傲</label></td>
+                    <td><input type="radio" id="06-m-diamond" name="06-m" value="diamond"><label>&diams;</label></td>
+                    <td><input type="radio" id="06-l-pentagram" name="06-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>善于创新：用新的方法处理事情</label></td>
+                    <td><input type="radio" id="06-m-diamond" name="06-m" value="diamond"><label>&diams;</label></td>
+                    <td><input type="radio" id="06-l-circle" name="06-l" value="circle"><label>&cir;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 7</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>善于表达：懂得表现感情</label></td>
+                    <td><input type="radio" id="07-m-square" name="07-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="07-l-square" name="07-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>认真：谨慎专注</label></td>
+                    <td><input type="radio" id="07-m-pentagram" name="07-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="07-l-pentagram" name="07-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>支配欲强：喜欢处于控制地位</label></td>
+                    <td><input type="radio" id="07-m-circle" name="07-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="07-l-circle" name="07-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>反应力强：对他人言行能快速反应</label></td>
+                    <td><input type="radio" id="07-m-diamond" name="07-m" value="diamond"><label>&diams;</label></td>
+                    <td><input type="radio" id="07-l-triangle" name="07-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 8</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>泰然自若：做事充满信心</label></td>
+                    <td><input type="radio" id="08-m-square" name="08-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="08-l-square" name="08-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>敏锐的观察力：细心，善于观察</label></td>
+                    <td><input type="radio" id="08-m-pentagram" name="08-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="08-l-diamond" name="08-l" value="diamond"><label>&diams;</label></td>
+                </tr>
+                <tr>
+                    <td><label>朴实：从不自吹自擂</label></td>
+                    <td><input type="radio" id="08-m-triangle" name="08-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="08-l-triangle" name="08-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>性急：坐立不安，喜欢有所变化</label></td>
+                    <td><input type="radio" id="08-m-circle" name="08-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="08-l-circle" name="08-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 9</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>圆滑：言辞谨慎</label></td>
+                    <td><input type="radio" id="09-m-pentagram" name="09-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="09-l-pentagram" name="09-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>随和：愿意赞同别人的意见</label></td>
+                    <td><input type="radio" id="09-m-triangle" name="09-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="09-l-triangle" name="09-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有魅力：能吸引他人</label></td>
+                    <td><input type="radio" id="09-m-square" name="09-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="09-l-square" name="09-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>坚持观点：坚信自己的观点</label></td>
+                    <td><input type="radio" id="09-m-circle" name="09-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="09-l-circle" name="09-l" value="circle"><label>&cir;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 10</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr><tr>
+                    <td><label>勇敢：有勇气，无畏</label></td>
+                    <td><input type="radio" id="10-m-circle" name="10-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="10-l-circle" name="10-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>善于鼓舞人：激励别人去做某事</label></td>
+                    <td><input type="radio" id="10-m-square" name="10-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="10-l-square" name="10-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>乐于服从：顺从，温和</label></td>
+                    <td><input type="radio" id="10-m-triangle" name="10-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="10-l-triangle" name="10-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>胆怯：缺乏信心</label></td>
+                    <td><input type="radio" id="10-m-diamond" name="10-m" value="diamond"><label>&diams;</label></td>
+                    <td><input type="radio" id="10-l-pentagram" name="10-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 11</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>拘谨：沉默寡言，自制</label></td>
+                    <td><input type="radio" id="11-m-pentagram" name="11-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="11-l-pentagram" name="11-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>亲切：乐于助人</label></td>
+                    <td><input type="radio" id="11-m-triangle" name="11-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="11-l-triangle" name="11-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>意志坚定：不轻易让步</label></td>
+                    <td><input type="radio" id="11-m-circle" name="11-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="11-l-circle" name="11-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>活泼：快乐，积极</label></td>
+                    <td><input type="radio" id="11-m-square" name="11-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="11-l-square" name="11-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 12</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>激发性：令人振奋</label></td>
+                    <td><input type="radio" id="12-m-square" name="12-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="12-l-square" name="12-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>仁慈：愿意施与或分享</label></td>
+                    <td><input type="radio" id="12-m-triangle" name="12-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="12-l-triangle" name="12-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有洞察力的：能理解所发生的事情</label></td>
+                    <td><input type="radio" id="12-m-pentagram" name="12-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="12-l-pentagram" name="12-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>独立性：不依赖别人</label></td>
+                    <td><input type="radio" id="12-m-circle" name="12-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="12-l-circle" name="12-l" value="circle"><label>&cir;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 13</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>好胜：渴望获胜</label></td>
+                    <td><input type="radio" id="13-m-circle" name="13-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="13-l-circle" name="13-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>体谅：关心他人</label></td>
+                    <td><input type="radio" id="13-m-triangle" name="13-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="13-l-triangle" name="13-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>欢乐愉快：充满活力，无忧无虑</label></td>
+                    <td><input type="radio" id="13-m-square" name="13-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="13-l-square" name="13-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>隐秘的：不暴露想法</label></td>
+                    <td><input type="radio" id="13-m-pentagram" name="13-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="13-l-pentagram" name="13-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 14</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>挑剔：要求事物</label></td>
+                    <td><input type="radio" id="14-m-pentagram" name="14-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="14-l-pentagram" name="14-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>顺从：愿意听从指示</label></td>
+                    <td><input type="radio" id="14-m-triangle" name="14-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="14-l-triangle" name="14-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>坚定：不改变主张、心意</label></td>
+                    <td><input type="radio" id="14-m-circle" name="14-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="14-l-circle" name="14-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>调皮：喜欢玩乐</label></td>
+                    <td><input type="radio" id="14-m-square" name="14-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="14-l-square" name="14-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 15</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>有吸引力：令人喜爱</label></td>
+                    <td><input type="radio" id="15-m-square" name="15-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="15-l-square" name="15-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                
+                <tr>
+                    <td><label>自我省察：深思熟虑</label></td>
+                    <td><input type="radio" id="15-m-pentagram" name="15-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="15-l-diamond" name="15-l" value="diamond"><label>&diams;</label></td>
+                </tr>
+                <tr>
+                    <td><label>固执：拒绝妥协</label></td>
+                    <td><input type="radio" id="15-m-circle" name="15-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="15-l-circle" name="15-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>可预测的：始终如一</label></td>
+                    <td><input type="radio" id="15-m-triangle" name="15-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="15-l-triangle" name="15-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 16</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>有逻辑性：仔细地考虑问题</label></td>
+                    <td><input type="radio" id="16-m-pentagram" name="16-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="16-l-pentagram" name="16-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>大胆：敢于冒险</label></td>
+                    <td><input type="radio" id="16-m-circle" name="16-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="16-l-circle" name="16-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>忠心：忠于朋友</label></td>
+                    <td><input type="radio" id="16-m-triangle" name="16-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="16-l-triangle" name="16-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>迷人：讨人喜欢，有吸引力</label></td>
+                    <td><input type="radio" id="16-m-square" name="16-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="16-l-square" name="16-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 17</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>平易近人：对人亲切</label></td>
+                    <td><input type="radio" id="17-m-square" name="17-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="17-l-square" name="17-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有耐心：心平气和</label></td>
+                    <td><input type="radio" id="17-m-triangle" name="17-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="17-l-triangle" name="17-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>自信：相信自己</label></td>
+                    <td><input type="radio" id="17-m-circle" name="17-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="17-l-circle" name="17-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>语气温和：说话轻声细语</label></td>
+                    <td><input type="radio" id="17-m-pentagram" name="17-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="17-l-pentagram" name="17-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 18</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>心甘乐意：乐于助人</label></td>
+                    <td><input type="radio" id="18-m-triangle" name="18-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="18-l-triangle" name="18-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>热切渴望：有强烈的欲望要做某事</label></td>
+                    <td><input type="radio" id="18-m-circle" name="18-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="18-l-diamond" name="18-l" value="diamond"><label>&diams;</label></td>
+                </tr>
+                <tr>
+                    <td><label>彻底：做事有始有终</label></td>
+                    <td><input type="radio" id="18-m-pentagram" name="18-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="18-l-pentagram" name="18-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>情绪高昂：兴致高昂，精力充沛</label></td>
+                    <td><input type="radio" id="18-m-square" name="18-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="18-l-square" name="18-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 19</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>积极进取：行动强而有力</label></td>
+                    <td><input type="radio" id="19-m-circle" name="19-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="19-l-circle" name="19-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>外向：爱交际、兴致勃勃</label></td>
+                    <td><input type="radio" id="19-m-square" name="19-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="19-l-square" name="19-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>和蔼可亲：随和，真诚</label></td>
+                    <td><input type="radio" id="19-m-triangle" name="19-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="19-l-triangle" name="19-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>瞻前顾后：顾虑重重，犹豫不决</label></td>
+                    <td><input type="radio" id="19-m-diamond" name="19-m" value="diamond"><label>&diams;</label></td>
+                    <td><input type="radio" id="19-l-pentagram" name="19-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 20</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>充满信心：有自信</label></td>
+                    <td><input type="radio" id="20-m-square" name="20-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="20-l-square" name="20-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有同情心：为他人之忧而忧</label></td>
+                    <td><input type="radio" id="20-m-triangle" name="20-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="20-l-triangle" name="20-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>公正：平等地对待所有人</label></td>
+                    <td><input type="radio" id="20-m-diamond" name="20-m" value="diamond"><label>&diams;</label></td>
+                    <td><input type="radio" id="20-l-pentagram" name="20-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>肯定的：确信且强有力</label></td>
+                    <td><input type="radio" id="20-m-circle" name="20-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="20-l-circle" name="20-l" value="circle"><label>&cir;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 21</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>纪律严明：按照计划行事</label></td>
+                    <td><input type="radio" id="21-m-pentagram" name="21-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="21-l-pentagram" name="21-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>慷慨大方：愿意与他人分享，毫不自私</label></td>
+                    <td><input type="radio" id="21-m-triangle" name="21-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="21-l-triangle" name="21-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>生气勃勃：活泼主动，溢于言表</label></td>
+                    <td><input type="radio" id="21-m-square" name="21-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="21-l-square" name="21-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>执着：不轻易放弃</label></td>
+                    <td><input type="radio" id="21-m-circle" name="21-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="21-l-circle" name="21-l" value="circle"><label>&cir;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 22</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>感情用事：行动不经过太多思考</label></td>
+                    <td><input type="radio" id="22-m-square" name="22-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="22-l-square" name="22-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>内向：为人隐秘孤僻</label></td>
+                    <td><input type="radio" id="22-m-pentagram" name="22-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="22-l-pentagram" name="22-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>坚强的：有魄力，有威信</label></td>
+                    <td><input type="radio" id="22-m-circle" name="22-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="22-l-circle" name="22-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>悠游自在：不轻易感到心烦意乱</label></td>
+                    <td><input type="radio" id="22-m-triangle" name="22-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="22-l-triangle" name="22-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 23</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>善于交际：喜爱与众人交往</label></td>
+                    <td><input type="radio" id="23-m-square" name="23-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="23-l-square" name="23-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>优雅：具有良好的举止风度</label></td>
+                    <td><input type="radio" id="23-m-pentagram" name="23-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="23-l-pentagram" name="23-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>精力充沛：行动强而有力</label></td>
+                    <td><input type="radio" id="23-m-circle" name="23-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="23-l-circle" name="23-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>宽宏大量：慈悲为怀，宽容谅解</label></td>
+                    <td><input type="radio" id="23-m-triangle" name="23-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="23-l-triangle" name="23-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 24</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>虏获人心：使人神魂颠倒</label></td>
+                    <td><input type="radio" id="24-m-square" name="24-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="24-l-square" name="24-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>安于现状：容易满足</label></td>
+                    <td><input type="radio" id="24-m-triangle" name="24-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="24-l-triangle" name="24-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>苛求：利用强权达到目的</label></td>
+                    <td><input type="radio" id="24-m-circle" name="24-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="24-l-circle" name="24-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>循规蹈矩：按规则行事</label></td>
+                    <td><input type="radio" id="24-m-pentagram" name="24-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="24-l-pentagram" name="24-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 25</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>爱辩论：喜欢争辩</label></td>
+                    <td><input type="radio" id="25-m-circle" name="25-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="25-l-circle" name="25-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有条理：做事思路清晰</label></td>
+                    <td><input type="radio" id="25-m-triangle" name="25-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="25-l-triangle" name="25-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>愿意合作：能与他人融洽合作</label></td>
+                    <td><input type="radio" id="25-m-pentagram" name="25-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="25-l-pentagram" name="25-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>心情开朗：无忧无虑，心情愉快</label></td>
+                    <td><input type="radio" id="25-m-square" name="25-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="25-l-square" name="25-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 26</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>快乐逍遥：充满欢乐，俏皮</label></td>
+                    <td><input type="radio" id="26-m-square" name="26-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="26-l-square" name="26-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>精益求精：喜欢任何事物都准确无误</label></td>
+                    <td><input type="radio" id="26-m-pentagram" name="26-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="26-l-pentagram" name="26-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>直截了当：大胆，坦率</label></td>
+                    <td><input type="radio" id="26-m-circle" name="26-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="26-l-circle" name="26-l" value="circle"><label>&cir;</label></td>
+                </tr>
+               
+                <tr>
+                    <td><label>脾气温和：不轻易发怒</label></td>
+                    <td><input type="radio" id="26-m-triangle" name="26-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="26-l-triangle" name="26-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 27</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>坐立不安：寻求改变</label></td>
+                    <td><input type="radio" id="27-m-circle" name="27-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="27-l-circle" name="27-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>友善：友好，乐于助人</label></td>
+                    <td><input type="radio" id="27-m-triangle" name="27-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="27-l-triangle" name="27-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+                <tr>
+                    <td><label>有感染力：有吸引力，讨人欢心</label></td>
+                    <td><input type="radio" id="27-m-square" name="27-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="27-l-square" name="27-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>小心谨慎：专注以避免犯错</label></td>
+                    <td><input type="radio" id="27-m-pentagram" name="27-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="27-l-pentagram" name="27-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>No. 28</legend>
+            <table>
+                <tr>
+                    <td><label>你认为自己</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                </tr>
+                <tr>
+                    <td><label>尊重他人：为他人着想</label></td>
+                    <td><input type="radio" id="28-m-pentagram" name="28-m" value="pentagram"><label>&star;</label></td>
+                    <td><input type="radio" id="28-l-pentagram" name="28-l" value="pentagram"><label>&star;</label></td>
+                </tr>
+                <tr>
+                    <td><label>领导先锋：喜爱新事物</label></td>
+                    <td><input type="radio" id="28-m-circle" name="28-m" value="circle"><label>&cir;</label></td>
+                    <td><input type="radio" id="28-l-circle" name="28-l" value="circle"><label>&cir;</label></td>
+                </tr>
+                <tr>
+                    <td><label>乐观：总是往好的一面看</label></td>
+                    <td><input type="radio" id="28-m-square" name="28-m" value="square"><label>&EmptySmallSquare;</label></td>
+                    <td><input type="radio" id="28-l-square" name="28-l" value="square"><label>&EmptySmallSquare;</label></td>
+                </tr>
+                <tr>
+                    <td><label>乐于助人：喜爱帮助别人</label></td>
+                    <td><input type="radio" id="28-m-triangle" name="28-m" value="triangle"><label>&trisb;</label></td>
+                    <td><input type="radio" id="28-l-triangle" name="28-l" value="triangle"><label>&trisb;</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <button type="sbumit">提交</button>
+    </form>
+    <iframe id="result" name="result" style="display: none;">
+    </iframe>
+    <div>
+        <table >
+            <tbody id="result-table" style="display: none;">
+                <tr>
+                    <td><label>形状</label></td>
+                    <td><label>最符合</label></td>
+                    <td><label>最不符合</label></td>
+                    <td>等于</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+    <script type="text/javascript">
+        var has_heading = false;
+        var charMap = {"circle": "&cir;", "pentagram": "&star;", "square": "&EmptySmallSquare;", "triangle": "&trisb;", "diamond": "&diams;"};
+        var form = document.querySelector("form");
+
+        function validate(formdata){
+            var name;
+            for( var i = 1; i <= 28; i++){
+                if (formdata.get(("0"+i.toString() + "-m").slice(-4)) == null || formdata.get(("0"+i.toString() + "-l").slice(-4)) == null) {
+                    alert("No. " +i.toString() + " is required!")
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+
+        function calculate(event){
+            var data = new FormData(form);
+            if (!validate(data)){
+                return false;
+            }
+            
+            var arr = new Array("circle", "square", "triangle", "pentagram", "diamond");
+            var resultM = {"circle": 0, "pentagram": 0, "square": 0, "triangle": 0, "diamond": 0};
+            var resultL = {"circle": 0, "pentagram": 0, "square": 0, "triangle": 0, "diamond": 0};
+            var name;
+            for( var i = 1; i <= 28; i++){
+                name = ("0"+i.toString() + "-m").slice(-4);
+                resultM[data.get(name)] ++;
+                name = ("0"+i.toString() + "-l").slice(-4);
+                resultL[data.get(name)] ++;
+            }
+            var table = document.getElementById('result-table');
+            while (table != null && table.children.length > 1) {
+                table.removeChild(table.children[table.children.length-1]);
+            }
+            arr.forEach(item => {
+                var tr = document.createElement("tr");
+                var tdC = document.createElement('td');
+                tdC.innerHTML = "<label>" + charMap[item] + "</label>";
+                var tdM = document.createElement('td');
+                tdM.textContent = resultM[item];
+                var tdL = document.createElement('td');
+                tdL.textContent = resultL[item];
+                var tdDiff = document.createElement('td');
+                tdDiff.textContent = (resultM[item] - resultL[item]).toString();
+                tr.append(tdC);
+                tr.append(tdM);
+                tr.append(tdL);
+                tr.append(tdDiff);
+                table.appendChild(tr);
+            });
+            table.setAttribute("style", "");
+            if (!has_heading){
+                var heading = document.createElement('heading');
+                heading.innerText = "DISC答案统计";
+                table.parentElement.parentElement.insertBefore(heading, table.parentElement);
+                has_heading = true;
+            }
+            
+            return true;
+        }
+
+        form.addEventListener('submit', calculate)
+
+    </script>
+</body>
